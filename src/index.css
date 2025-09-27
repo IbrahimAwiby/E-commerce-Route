@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* light gray for track */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #10b981, #059669); /* green gradient */
+  border-radius: 4px;
+  border: 1px solid #f0fdf4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    135deg,
+    #059669,
+    #047857
+  ); /* darker green on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 #f1f5f9;
+}
+
+/* Text selection styles */
+::selection {
+  background: #10b981; /* green-500 */
+  color: white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #10b981; /* green-500 */
+  color: white;
+  text-shadow: none;
+}
+
+/* Optional: Different selection color for dark mode */
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background: #059669; /* green-600 for better contrast in dark mode */
+    color: #f0fdf4;
+  }
+
+  ::-moz-selection {
+    background: #059669;
+    color: #f0fdf4;
+  }
+
+  /* Dark mode scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #1e293b; /* dark gray for track in dark mode */
+  }
+
+  /* For Firefox dark mode */
+  * {
+    scrollbar-color: #059669 #1e293b;
+  }
+}
+
+/* Optional: Smooth scrolling for better user experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Custom selection for specific elements */
+.text-content::selection {
+  background: #34d399; /* lighter green for text content */
+}
+
+.text-content::-moz-selection {
+  background: #34d399;
+}
+
+/* Optional: Remove selection color for buttons and interactive elements */
+button::selection,
+a::selection,
+input::selection,
+select::selection {
+  background: transparent;
+}
+
+button::-moz-selection,
+a::-moz-selection,
+input::-moz-selection,
+select::-moz-selection {
+  background: transparent;
+}
