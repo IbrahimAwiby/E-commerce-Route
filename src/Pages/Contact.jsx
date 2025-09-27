@@ -49,13 +49,13 @@ export const Contact = () => {
     {
       icon: FiMail,
       title: "Email Us",
-      content: "support@ecoshop.com",
+      content: "awiby.net@gmail.com",
       subtitle: "We'll reply within 24 hours",
     },
     {
       icon: FiPhone,
       title: "Call Us",
-      content: "+20 100 000 0000",
+      content: "+20 103 107 1411",
       subtitle: "Mon-Fri from 8am to 6pm",
     },
     {
